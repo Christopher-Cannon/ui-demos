@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search 1</title>
+
+  <style>
+
+    *, 
+    ::before {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #161C27;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .card-container {
+      background-color: #242C3D;
+      border: 15px solid #242C3D;
+      border-radius: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      background-color: #111620;
+      border-radius: 15px;
+      padding: 5rem;
+      position: relative;
+      width: 800px;
+    }
+
+    .breadcrumb {
+      color: #92B6FF;
+      margin-bottom: 1.5rem;
+    }
+
+    .breadcrumb a {
+      color: #92B6FF;
+      text-decoration: none;
+    }
+
+    .search-title {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .search-title,
+    .search {
+      margin: 1rem 0;
+      color: #92B6FF;
+    }
+
+    .search-box {
+      background-color: #161C27;
+      border: 1px solid #242C3D;
+      border-radius: 3px;
+      color: #92B6FF;
+      padding: 1.5rem;
+      padding-left: 3rem;
+      outline: 0;
+      width: 100%;
+    }
+
+    .search {
+      position: relative;
+    }
+
+    .search-button {
+      background-color: rgba(0, 0, 0, 0);
+      border: 0;
+      color: #92B6FF;
+      font-size: 2rem;
+      padding: 0.65rem 1rem 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0.5rem 0;
+    }
+
+    .filter {
+      background-color: #142037;
+      border-radius: 25px;
+      color: #88A4DF;
+      cursor: pointer;
+      padding: 0.5rem 1rem 0.65rem;
+    }
+
+    .filter-selected {
+      background-color: #92B6FF;
+      color: #142037;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="card-container">
+    <div class="card">
+      <p class="breadcrumb">
+        <a href="#">All recipes</a> / 
+        <a href="#">Vegetarian</a>
+      </p>
+  
+      <h2 class="search-title">All recipes / Vegetarian</h2>
+  
+      <form class="search">
+        <input type="text" class="search-box" placeholder="Search hundreds of recipes">
+        <button class="search-button">&telrec;</button>
+      </form>
+  
+      <div class="filters">
+        <div class="filter">Dinner</div>
+        <div class="filter">Quick dinners</div>
+        <div class="filter filter-selected">Reasonably priced</div>
+        <div class="filter">Kid friendly</div>
+        <div class="filter">Pasta</div>
+        <div class="filter">Get ingredients</div>
+        <div class="filter">Weekday</div>
+        <div class="filter">Fish</div>
+        <div class="filter">Vegetarian</div>
+        <div class="filter">Supper</div>
+        <div class="filter">Salads</div>
+        <div class="filter">Chicken</div>
+        <div class="filter">Grill</div>
+        <div class="filter">Taco</div>
+        <div class="filter">Pizza</div>
+        <div class="filter">Seafood</div>
+        <div class="filter">Beef</div>
+        <div class="filter">Dessert</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
