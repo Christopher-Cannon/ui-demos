@@ -12,9 +12,12 @@
 
     :root {
       --c-black: #151B32;
+      --c-off-white: #FBFCFF;
+      --c-blue-grey: #BFC8E6;
       --c-pale-blue: #E6EAf8;
       --c-light-blue: #849FFF;
-      --c-blue-grey: #BFC8E6;
+      --c-blue: #516FD4;
+      --c-drop-shadow: rgba(218, 224, 249, 0.7);
     }
 
     * {
@@ -36,38 +39,49 @@
       font-family: "Poppins", sans-serif;
       font-size: 1rem;
     }
+
+    h1, h2, h3, h4 {
+      font-family: "Merriweather", serif;
+    }
     
     h2 {
-      font-family: "Merriweather", serif;
       font-size: 2rem;
     }
 
-    .card {
+    .panel {
       background-color: white;
       border-radius: 10px;
-      padding: 2rem 4rem;
-      position: relative;
+      padding: 5rem 6rem;
       width: 100%;
     }
-
+    
     .controls {
       display: flex;
       justify-content: space-between;
+    }
+    
+    .search-form {
+      position: relative;
     }
 
     .search-box {
       border: 1px solid var(--c-blue-grey);
       border-radius: 5px;
+      outline: 0;
       padding: 1rem;
       padding-left: 3.5rem;
       max-width: 300px;
+    }
+
+    .search-box:focus {
+      border: 1px solid var(--c-blue);
     }
 
     .search-box-btn {
       background-color: rgba(0, 0, 0, 0);
       border: 0;
       cursor: pointer;
-      margin: 0 4.75rem;
+      margin: 0 0.9rem;
       margin-top: 1rem;
       position: absolute;
       left: 0;
@@ -98,11 +112,69 @@
       color: white;
     }
 
+    .user-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1rem;
+      margin: 5rem 0 0;
+    }
+
+    .card {
+      background-color: var(--c-off-white);
+      border: 1px solid var(--c-off-white);
+      border-radius: 10px;
+      display: flex;
+      padding: 1rem 1rem 2.5rem;
+    }
+
+    .card:hover {
+      border: 1px solid var(--c-blue-grey);
+      box-shadow: 0 8px 23px var(--c-drop-shadow);
+    }
+
+    .card-avatar {
+      margin-right: 1rem;
+      max-width: 97px;
+    }
+
+    .card-avatar img {
+      border-radius: 50%;
+      width: 100%;
+    }
+
+    .card-title {
+      font-size: 1.1rem;
+      margin-bottom: 0;
+    }
+
+    .card-location {
+      font-size: 0.9rem;
+      margin-top: 0.25rem;
+    }
+
+    .card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+    }
+
+    .tag {
+      border: 1px solid var(--c-blue-grey);
+      border-radius: 50px;
+      color: var(--c-blue);
+      font-size: 0.75rem;
+      padding: 0.1rem 0.5rem 0.125rem;
+      text-decoration: none;
+    }
+
+    .tag:hover {
+      border: 1px solid var(--c-blue);
+    }
 
   </style>
 </head>
 <body>
-  <div class="card">
+  <div class="panel">
     <h2>Users</h2>
 
     <div class="controls">
@@ -124,6 +196,116 @@
         <a class="filter" href="#">Voters</a>
         <a class="filter" href="#">Editors</a>
         <a class="filter" href="#">Moderators</a>
+      </div>
+    </div>
+
+    <div class="user-list">
+      <div class="card">
+        <div class="card-avatar">
+          <img src="images/man-1.jpg" alt="Avatar of user">
+        </div>
+
+        <div class="card-details">
+          <h3 class="card-title">Robert Green</h3>
+
+          <p class="card-location">Troy, MI</p>
+
+          <div class="card-tags">
+            <a class="tag" href="#">clothes</a>
+            <a class="tag" href="#">bicycles</a>
+            <a class="tag" href="#">mountains</a>
+            <a class="tag" href="#">trees</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-avatar">
+          <img src="images/woman-1.jpg" alt="Avatar of user">
+        </div>
+        
+        <div class="card-details">
+          <h3 class="card-title">Jane Brewer</h3>
+        
+          <p class="card-location">Fort Worth, TX</p>
+        
+          <div class="card-tags">
+            <a class="tag" href="#">music</a>
+            <a class="tag" href="#">records</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-avatar">
+          <img src="images/man-2.jpg" alt="Avatar of user">
+        </div>
+        
+        <div class="card-details">
+          <h3 class="card-title">Brad Rashford</h3>
+        
+          <p class="card-location">Austin, TX</p>
+        
+          <div class="card-tags">
+            <a class="tag" href="#">repair</a>
+            <a class="tag" href="#">bicycles</a>
+            <a class="tag" href="#">customization</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-avatar">
+          <img src="images/woman-2.jpg" alt="Avatar of user">
+        </div>
+        
+        <div class="card-details">
+          <h3 class="card-title">Arlene Yeoman</h3>
+        
+          <p class="card-location">Cincinnati, OH</p>
+        
+          <div class="card-tags">
+            <a class="tag" href="#">sports</a>
+            <a class="tag" href="#">fitness</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-avatar">
+          <img src="images/man-3.jpg" alt="Avatar of user">
+        </div>
+        
+        <div class="card-details">
+          <h3 class="card-title">Arthur Jameson</h3>
+        
+          <p class="card-location">Boulder, CO</p>
+        
+          <div class="card-tags">
+            <a class="tag" href="#">cars</a>
+            <a class="tag" href="#">travel</a>
+            <a class="tag" href="#">earth</a>
+            <a class="tag" href="#">camping</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-avatar">
+          <img src="images/woman-3.jpg" alt="Avatar of user">
+        </div>
+        
+        <div class="card-details">
+          <h3 class="card-title">Jennider Osman</h3>
+        
+          <p class="card-location">Lyndhurst, NJ</p>
+        
+          <div class="card-tags">
+            <a class="tag" href="#">hats</a>
+            <a class="tag" href="#">desks</a>
+            <a class="tag" href="#">plants</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
