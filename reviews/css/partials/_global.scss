@@ -17,6 +17,10 @@ h2 {
   font-size: 2.1rem;
 }
 
+h4 {
+  font-size: 1rem;
+}
+
 body {
   background-color: colour(light-grey);
   color: colour(navy);
@@ -28,12 +32,12 @@ body {
 .review-container {
   display: flex;
   justify-content: flex-end;
-  margin: auto;
+  margin: 5rem auto;
   position: relative;
   width: 100%;
 
   @include mq-min($medium) {
-    width: 750px;
+    width: calc($medium) - 25px;
   }
 }
 
@@ -47,9 +51,13 @@ body {
   width: calc(100% - 40px);
 
   @include mq-min($medium) {
+    box-shadow: 
+      0 12px 92px colour(navy-translucent),
+      -80px -80px 0 white;
+    width: calc(100% - 80px);
     margin-top: 3rem;
-    padding: 5rem 4rem;
-    width: 700px;
+    padding: 6rem;
+    width: 750px;
   }
 }
 
@@ -86,7 +94,8 @@ body {
 
 .average-rating-top {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -96,28 +105,33 @@ body {
 }
 
 .search-form {
+  margin: 2.5rem 0;
   position: relative;
 }
 
 .search-input {
   background-color: white;
   border: 1px solid white;
-  border-radius: calc($radius * 2);
-  margin: 3rem 0;
+  border-radius: $radius;
+  font-weight: bold;
   padding: 1rem;
   padding-left: 3rem;
   width: 100%;
 }
 
+.search-input::placeholder {
+  color: colour(blue-grey);
+  opacity: 1;
+}
+
 .btn-search {
   background-color: colour(transparent);
   border: 0;
-  border-radius: calc($radius * 2);
+  border-radius: $radius;
   cursor: pointer;
   position: absolute;
   top: 0;
   left: 0;
-  margin-top: 3rem;
   padding: 0.96rem;
   padding-right: 0.25rem;
 }
@@ -126,4 +140,69 @@ body {
   display: block;
   height: 28px;
   width: 28px;
+}
+
+.reviews-graph-container {
+  margin-bottom: 4rem;
+  padding: 0 0.67rem;
+}
+
+.reviews-graph-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1.5rem auto;
+}
+
+.graph-bar {
+  background-color: colour(very-light-grey);
+  border: 1px solid colour(grey);
+  border-radius: $radius;
+  flex: 1;
+  height: 10px;
+  position: relative;
+}
+
+.graph-bar-fg {
+  background-color: colour(gold);
+  border: 1px solid colour(orange);
+  border-radius: $radius;
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  height: 10px;
+  width: 0;
+}
+
+.rating-count {
+  min-width: 30px;
+}
+
+.small-icon {
+  height: 25px;
+  width: 25px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.btn {
+  border: 0;
+  border-radius: calc($radius * 2);
+  cursor: pointer;
+  padding: 1rem 2rem;
+}
+
+.btn-primary {
+  @extend .btn;
+
+  background-color: colour(navy);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: colour(dark-blue);
 }
