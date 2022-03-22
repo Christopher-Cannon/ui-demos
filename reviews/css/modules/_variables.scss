@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Poppins:wght@500;600&display=swap');
 
 $font-heading: 'Merriweather', serif;
 $font-body: 'Poppins', sans-serif;
@@ -22,6 +22,7 @@ $colours: (
   dark-blue:#242672,
   navy: #191B4A,
   navy-translucent: #191B4A1A,
+  navy-translucent-fainter: hsla(238, 49%, 19%, 0.08),
   gold: #FFD66C,
   orange: #EFB153,
 );
