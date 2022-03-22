@@ -1,0 +1,208 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+input,
+button {
+  font-family: $font-body;
+  @include font-size($base-font-size);
+}
+
+h1, h2, h3 {
+  font-family: $font-heading;
+}
+
+h2 {
+  font-size: 2.1rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+body {
+  background-color: colour(light-grey);
+  color: colour(navy);
+  display: flex;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.review-container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 5rem auto;
+  position: relative;
+  width: 100%;
+
+  @include mq-min($medium) {
+    width: calc($medium) - 25px;
+  }
+}
+
+.review-content {
+  background-color: colour(off-white);
+  border-radius: $radius;
+  box-shadow: 
+    0 12px 92px colour(navy-translucent),
+    -40px -40px 0 white;
+  padding: 2rem;
+  width: calc(100% - 40px);
+
+  @include mq-min($medium) {
+    box-shadow: 
+      0 12px 92px colour(navy-translucent),
+      -80px -80px 0 white;
+    width: calc(100% - 80px);
+    margin-top: 3rem;
+    padding: 6rem;
+    width: 750px;
+  }
+}
+
+.review-content-header {
+  @include mq-min($small) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.review-content-title {
+  margin-top: 0;
+  text-align: center;
+
+  @include mq-min($small) {
+    max-width: 300px;
+    text-align: left;
+  }
+}
+
+.average-rating-container {
+  @include mq-max($small) {
+    margin: auto;
+  }
+
+  background-color: white;
+  border-radius: calc($radius / 2);
+  box-shadow: 0 7px 20px colour(navy-translucent);
+  max-width: 162px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.average-rating-top {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.average-rating-value {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.search-form {
+  margin: 2.5rem 0;
+  position: relative;
+}
+
+.search-input {
+  background-color: white;
+  border: 1px solid white;
+  border-radius: $radius;
+  font-weight: bold;
+  padding: 1rem;
+  padding-left: 3rem;
+  width: 100%;
+}
+
+.search-input::placeholder {
+  color: colour(blue-grey);
+  opacity: 1;
+}
+
+.btn-search {
+  background-color: colour(transparent);
+  border: 0;
+  border-radius: $radius;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.96rem;
+  padding-right: 0.25rem;
+}
+
+.btn-search img {
+  display: block;
+  height: 28px;
+  width: 28px;
+}
+
+.reviews-graph-container {
+  margin-bottom: 4rem;
+  padding: 0 0.67rem;
+}
+
+.reviews-graph-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1.5rem auto;
+}
+
+.graph-bar {
+  background-color: colour(very-light-grey);
+  border: 1px solid colour(grey);
+  border-radius: $radius;
+  flex: 1;
+  height: 10px;
+  position: relative;
+}
+
+.graph-bar-fg {
+  background-color: colour(gold);
+  border: 1px solid colour(orange);
+  border-radius: $radius;
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  height: 10px;
+  width: 0;
+}
+
+.rating-count {
+  min-width: 30px;
+}
+
+.small-icon {
+  height: 25px;
+  width: 25px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.btn {
+  border: 0;
+  border-radius: calc($radius * 2);
+  cursor: pointer;
+  padding: 1rem 2rem;
+}
+
+.btn-primary {
+  @extend .btn;
+
+  background-color: colour(navy);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: colour(dark-blue);
+}

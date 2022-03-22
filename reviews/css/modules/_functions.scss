@@ -1,0 +1,8 @@
+@function colour($colour-name) {
+    @return map-get($colours, $colour-name);
+}
+
+@function calculateRem($size) {
+    $remSize: calc($size / 16px);
+    @return calc($remSize * 1rem);
+}
