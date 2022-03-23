@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+input,
+button {
+  font-family: $font-body;
+  @include font-size($base-font-size);
+}
+
+body {
+  margin: 0 auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+.content-wrapper {
+  max-width: $large;
+  margin: auto;
+  padding: 0 1rem;
+  position: relative;
+}
+
+.header-content {
+  @include mq-min($small) {
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+    margin: 0.75rem auto 1.5rem;
+  }
+}
+
+.mobile-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2.5rem 0 1.5rem;
+
+  @include mq-min($small) {
+    margin: 0;
+  }
+}
+
+.logo {
+  @include mq-min($small) {
+    margin-right: 2rem;
+  }
+}
+
+.logo img {
+  display: block;
+}
+
+.nav-toggle-btn {
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+}
+
+.nav-toggle-btn img {
+  filter: invert(69%) sepia(8%) saturate(323%) hue-rotate(217deg) brightness(89%) contrast(89%);
+  display: block;
+  height: 30px;
+  width: 30px;
+}
+
+.page-nav {
+  @include mq-max(calc($small + 1px)) {
+    background-color: colour(dark-violet);
+    border-radius: $radius;
+    padding: 1rem;
+    position: absolute;
+    text-align: center;
+    width: calc(100% - 2rem);
+  }
+
+  @include mq-min($small) {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+  }
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0.5rem 1rem;
+
+  @include mq-min($small) {
+    display: flex;
+    gap: 2rem;
+  }
+}
+
+.nav-list li {
+  margin: 0.65rem auto;
+}
+
+.nav-list a:not(.btn-primary) {
+  display: block;
+  color: white;
+  padding: 0.5rem 0;
+  text-decoration: none;
+
+  @include mq-min($small) {
+    color: colour(greyish-violet);
+  }
+}
+
+.nav-list-break {
+  background-color: colour(violet);
+  border: 0;
+  height: 1px;
+}
+
+.btn {
+  border-radius: $radius;
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn-primary {
+  @extend .btn;
+
+  background-color: colour(cyan);
+  color: white;
+
+  &:hover {
+    background-color: colour(light-cyan);
+  }
+}
+
+.round {
+  border-radius: calc($radius * 5);
+}
+
+.full-width {
+  width: 100%;
+}
+
+.hide-on-desktop {
+  @include mq-min($small) {
+    display: none;
+  }
+}
+
+.hide-on-mobile {
+  @include mq-max($small) {
+    display: none;
+  }
+}
