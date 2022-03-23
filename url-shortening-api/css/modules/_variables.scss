@@ -4,8 +4,9 @@ $font-body: 'Poppins', sans-serif;
 
 $base-font-size: 18px;
 
-$small: 730px;
-$large: 1100px;
+$small: 800px;
+$medium: 1100px;
+$large: 1440px;
 
 $radius: 10px;
 $transition: 0.15s;
@@ -20,4 +21,5 @@ $colours: (
   greyish-violet: hsl(258, 7%, 63%),
   very-dark-blue: hsl(255, 11%, 22%),
   very-dark-violet: hsl(260, 8%, 14%),
+  off-black: hsl(240, 6%, 13%)
 );
