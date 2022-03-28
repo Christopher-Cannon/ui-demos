@@ -1,7 +1,8 @@
 .btn {
   border-radius: $radius;
   display: inline-block;
-  padding: 0.5rem 1.5rem;
+  font-weight: bold;
+  padding: 0.6rem 2rem;
   text-align: center;
   text-decoration: none;
 }
@@ -19,6 +20,11 @@
 
 .round {
   border-radius: calc($radius * 5);
+}
+
+.larger {
+  font-size: 1.2em;
+  padding: 1.1rem 3rem;
 }
 
 .full-width {

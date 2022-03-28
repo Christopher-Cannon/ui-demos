@@ -8,6 +8,7 @@
 
   <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
   <link rel="stylesheet" href="./css/style.css">
+  <script src="js/mobile-nav.js" defer></script>
 </head>
 
 <body>
@@ -18,12 +19,17 @@
           <img src="./images/logo.svg" alt="Shortly logo">
         </div>
 
-        <button type="button" class="nav-toggle-btn hide-on-desktop" aria-hidden="true">
+        <button 
+          type="button" 
+          class="nav-toggle-btn hide-on-desktop" 
+          id="mobile-nav-toggle-btn" 
+          aria-hidden="true"
+        >
           <img src="./images/bars-solid.svg" alt="">
         </button>
       </div>
 
-      <nav class="page-nav hide-on-mobile">
+      <nav class="page-nav hide-on-mobile" id="page-navigation">
         <ul class="nav-list">
           <li><a href="#">Features</a></li>
           <li><a href="#">Pricing</a></li>
@@ -39,6 +45,37 @@
       </nav>
     </div>
   </header>
+
+  <main>
+    <section class="content-wrapper hero">
+      <div class="hero-image">
+        <img src="./images/illustration-working.svg" alt="Illustration of person working on a computer at a desk">
+      </div>
+
+      <div class="hero-content">
+        <h1 class="hero-title">More than just shorter links</h1>
+
+        <p class="hero-subtitle">
+          Build your brand's recognition and get detailed insights
+          on how your links are performing.
+        </p>
+
+        <a href="#" class="btn-primary round larger">Get Started</a>
+      </div>
+    </section>
+
+    <section class="content-wrapper shorten-form">
+
+    </section>
+
+    <section class="content-wrapper">
+      
+    </section>
+
+    <section class="content-wrapper">
+
+    </section>
+  </main>
 
   <footer class="page-footer">
     <div class="content-wrapper footer-content">
@@ -98,11 +135,7 @@
       </ul>
     </div>
   </footer>
-  <!-- More than just shorter links
-
-  Build your brand's recognition and get detailed insights
-  on how your links are performing.
-
+  <!--
   Get Started
 
   Shorten a link here...

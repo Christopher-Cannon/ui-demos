@@ -11,6 +11,7 @@ button {
 
 body {
   margin: 0 auto;
+  overflow: hidden;
 }
 
 button {
@@ -20,6 +21,6 @@ button {
 .content-wrapper {
   max-width: $large;
   margin: auto;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
   position: relative;
 }
