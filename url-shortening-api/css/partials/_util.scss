@@ -19,6 +19,14 @@
   }
 }
 
+.btn-dark {
+  background-color: colour(very-dark-blue);
+
+  &:hover {
+    background-color: colour(very-dark-blue);
+  }
+}
+
 .round {
   border-radius: calc($radius * 5);
 }

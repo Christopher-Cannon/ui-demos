@@ -7,6 +7,7 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  margin-bottom: 2rem;
   padding: 2rem;
   position: relative;
   z-index: 10;
@@ -59,4 +60,70 @@
   @include mq-min($small) {
     position: absolute;
   }
+}
+
+.shortened-link {
+  background-color: white;
+  border-radius: $radius;
+  margin: 2rem auto;
+
+  @include mq-min($small) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem auto;
+  }
+}
+
+.link-original {
+  border-bottom: 1px solid colour(grey);
+  margin: 0;
+
+  @include mq-min($small) {
+    border-bottom: 0;
+  }
+}
+
+.link-original,
+.shortened-link-interactive {
+  padding: 1rem 1.5rem;
+}
+
+.link-original,
+.link-short {
+  font-size: 1.25rem;
+
+  @include mq-min($small) {
+    font-size: 1.5rem;
+  }
+}
+
+.shortened-link-interactive {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  @include mq-min($small) {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+.link-short {
+  color: colour(cyan);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.copy-btn {
+  @extend .btn-primary;
+
+  border-radius: calc($radius * 0.75);
+  padding: 0.7rem;
+  width: 125px;
 }
