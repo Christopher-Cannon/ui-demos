@@ -1,0 +1,62 @@
+.shorten-form {
+  background-color: colour(very-dark-blue);
+  background-image: url("../images/bg-shorten-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  border-radius: calc($radius * 1.5);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  position: relative;
+  z-index: 10;
+
+  @include mq-min($small) {
+    background-image: url("../images/bg-shorten-desktop.svg");
+    background-position: center;
+    background-size: cover;
+    border-radius: calc($radius * 1.25);
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 4rem 5rem;
+  }
+}
+
+.shorten-form .btn-primary {
+  font-size: 1.5rem;
+}
+
+.shorten-form-input {
+  flex: 1;
+}
+
+.shorten-form-input input {
+  border: 4px solid white;
+  border-radius: $radius;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  width: 100%;
+
+  &::placeholder {
+    color: colour(darker-grey);
+  }
+
+  &.error {
+    border: 4px solid colour(red);
+
+    &::placeholder {
+      color: colour(red);
+    }
+  }
+}
+
+.error-message {
+  color: colour(red);
+  font-size: 1.25rem;
+  font-style: italic;
+  margin: 0.5rem 0;
+
+  @include mq-min($small) {
+    position: absolute;
+  }
+}

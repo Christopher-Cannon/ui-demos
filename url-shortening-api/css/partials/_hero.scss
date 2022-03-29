@@ -1,12 +1,13 @@
 .hero {
-  margin: 0 auto 2rem;
+  margin: 0 auto 10rem;
+  position: relative;
 
   @include mq-min($small) {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
-    margin: 2rem auto;
+    margin: 2rem auto 10rem;
   }
 }
 
@@ -73,3 +74,15 @@
   }
 }
 
+.split::before {
+  background-color: white;
+  content: "";
+  position: absolute;
+  height: 7rem;
+  width: 100%;
+  z-index: 1;
+
+  @include mq-min($small) {
+    height: 6rem;
+  }
+}

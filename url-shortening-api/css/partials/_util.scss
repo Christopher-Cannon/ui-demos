@@ -1,4 +1,5 @@
 .btn {
+  border: 0;
   border-radius: $radius;
   display: inline-block;
   font-weight: bold;
@@ -23,12 +24,16 @@
 }
 
 .larger {
-  font-size: 1.2em;
-  padding: 1.1rem 3rem;
+  font-size: 1.25em;
+  padding: 1.1rem 3.5rem;
 }
 
 .full-width {
   width: 100%;
+}
+
+.light-violet-bg {
+  background-color: colour(light-violet);
 }
 
 .hide-on-desktop {
@@ -41,4 +46,8 @@
   @include mq-max($small) {
     display: none;
   }
+}
+
+.hidden {
+  display: none;
 }

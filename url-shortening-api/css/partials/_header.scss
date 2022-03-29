@@ -113,7 +113,8 @@
 
 .account-controls {
   gap: 2rem;
-  padding-right: 0;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 
   @include mq-min($medium) {
     gap: 3rem;
