@@ -1,0 +1,65 @@
+.btn {
+  border: 0;
+  border-radius: $radius;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.6rem 2rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn-primary {
+  @extend .btn;
+
+  background-color: colour(cyan);
+  color: white;
+
+  &:hover {
+    background-color: colour(light-cyan);
+  }
+}
+
+.btn-dark {
+  background-color: colour(very-dark-blue);
+
+  &:hover {
+    background-color: colour(very-dark-blue);
+  }
+}
+
+.round {
+  border-radius: calc($radius * 5);
+}
+
+.larger {
+  font-size: 1.25em;
+  padding: 1.1rem 3.5rem;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.light-violet-bg {
+  background-color: colour(light-violet);
+}
+
+.grey {
+  color: colour(greyish-violet);
+}
+
+.hide-on-desktop {
+  @include mq-min($small) {
+    display: none;
+  }
+}
+
+.hide-on-mobile {
+  @include mq-max($small) {
+    display: none;
+  }
+}
+
+.hidden {
+  display: none;
+}

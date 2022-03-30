@@ -1,0 +1,23 @@
+.boost-section {
+  background-image: url("../images/bg-boost-mobile.svg");
+  background-color: colour(dark-violet);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 6rem 0;
+  text-align: center;
+
+  @include mq-min($small) {
+    background-image: url("../images/bg-boost-desktop.svg");
+    padding: 4rem 0;
+  }
+}
+
+.boost-section h2 {
+  color: white;
+  margin: 0 auto 1rem;
+
+  @include mq-min($small) {
+    margin-bottom: 2.5rem;
+  }
+}

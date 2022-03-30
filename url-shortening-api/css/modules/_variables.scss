@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+
+$font-body: 'Poppins', sans-serif;
+
+$base-font-size: 18px;
+
+$x-small: 600px;
+$small: 950px;
+$medium: 1200px;
+$large: 1440px;
+
+$radius: 10px;
+$transition: 0.15s;
+
+$colours: (
+  cyan: hsl(180, 66%, 49%),
+  light-cyan: hsl(180, 54%, 74%),
+  violet: hsl(259, 20%, 34%),
+  dark-violet: hsl(257, 27%, 26%),
+  red: hsl(0, 87%, 67%),
+  grey: hsl(0, 0%, 75%),
+  darker-grey: hsl(240, 1%, 38%),
+  light-violet: hsl(225, 33%, 95%),
+  greyish-violet: hsl(258, 7%, 63%),
+  very-dark-blue: hsl(255, 11%, 22%),
+  very-dark-violet: hsl(260, 8%, 14%),
+  off-black: hsl(240, 6%, 13%)
+);

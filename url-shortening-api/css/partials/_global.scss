@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+input,
+button {
+  font-family: $font-body;
+  @include font-size($base-font-size);
+}
+
+body {
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+h2 {
+  font-size: 2rem;
+
+  @include mq-min($small) {
+    font-size: 3rem;
+  }
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+.content-wrapper {
+  max-width: $large;
+  margin: auto;
+  padding: 0 1.5rem;
+  position: relative;
+}
