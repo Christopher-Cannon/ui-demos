@@ -16,6 +16,19 @@ body {
   overflow-x: hidden;
 }
 
+h2 {
+  font-size: 2rem;
+}
+@media screen and (min-width: 950px) {
+  h2 {
+    font-size: 3rem;
+  }
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
 button {
   cursor: pointer;
 }
@@ -67,6 +80,10 @@ button {
 
 .light-violet-bg {
   background-color: #eef0f6;
+}
+
+.grey {
+  color: #9e9aa7;
 }
 
 @media screen and (min-width: 950px) {
@@ -375,7 +392,6 @@ button {
 }
 
 .hero-subtitle {
-  color: #9e9aa7;
   font-size: 1.5rem;
   margin-top: 1rem;
   margin-bottom: 3rem;
@@ -440,8 +456,13 @@ button {
   border: 4px solid white;
   border-radius: 10px;
   font-size: 1.5rem;
-  padding: 1rem 2rem;
+  padding: 1rem;
   width: 100%;
+}
+@media screen and (min-width: 950px) {
+  .shorten-form-input input {
+    padding: 1rem 2rem;
+  }
 }
 .shorten-form-input input::-moz-placeholder {
   color: #606062;
@@ -451,6 +472,9 @@ button {
 }
 .shorten-form-input input::placeholder {
   color: #606062;
+}
+.shorten-form-input input:focus {
+  outline: 4px solid #2acfcf;
 }
 .shorten-form-input input.error {
   border: 4px solid #f46262;
@@ -463,6 +487,9 @@ button {
 }
 .shorten-form-input input.error::placeholder {
   color: #f46262;
+}
+.shorten-form-input input.error:focus {
+  outline: 0;
 }
 
 .error-message {
@@ -481,6 +508,7 @@ button {
   background-color: white;
   border-radius: 10px;
   margin: 2rem auto;
+  padding: 0.25rem 0;
 }
 @media screen and (min-width: 950px) {
   .shortened-link {
@@ -493,6 +521,7 @@ button {
 
 .link-original {
   border-bottom: 1px solid #bfbfbf;
+  color: #35323e;
   margin: 0;
 }
 @media screen and (min-width: 950px) {
@@ -542,5 +571,153 @@ button {
 .copy-btn {
   border-radius: 7.5px;
   padding: 0.7rem;
-  width: 125px;
+}
+@media screen and (min-width: 950px) {
+  .copy-btn {
+    width: 125px;
+  }
+}
+
+.info-section {
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+}
+
+.info-box {
+  margin: auto;
+  text-align: center;
+}
+@media screen and (min-width: 950px) {
+  .info-box {
+    width: 50%;
+  }
+}
+
+.info-box h2 {
+  color: #35323e;
+  margin-bottom: 0;
+}
+
+.info-subtitle {
+  font-size: 1.25rem;
+}
+@media screen and (min-width: 950px) {
+  .info-subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 10rem;
+  padding-bottom: 9rem;
+  position: relative;
+}
+@media screen and (min-width: 950px) {
+  .card-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.card-container::before {
+  background-color: #2acfcf;
+  content: "";
+  position: absolute;
+  top: 2.25rem;
+  left: calc(50% - 5px);
+  height: 80%;
+  width: 10px;
+}
+@media screen and (min-width: 950px) {
+  .card-container::before {
+    top: 25%;
+    left: 2rem;
+    height: 10px;
+    width: 90%;
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  padding: 6rem 3rem 2rem;
+  position: relative;
+  text-align: center;
+}
+@media screen and (min-width: 950px) {
+  .card {
+    text-align: left;
+  }
+}
+
+.card-one {
+  translate: 0 -3rem;
+}
+
+.card-three {
+  translate: 0 3rem;
+}
+
+.card-icon {
+  background-color: #3b3054;
+  border-radius: 100px;
+  display: inline-block;
+  padding: 2rem;
+  position: absolute;
+  top: -3rem;
+  left: calc(50% - 4rem);
+}
+@media screen and (min-width: 950px) {
+  .card-icon {
+    left: 3rem;
+  }
+}
+
+.card-icon img {
+  display: flex;
+  width: 55px;
+  margin: auto;
+}
+
+.card-icon:last-of-type img {
+  width: 65px;
+}
+
+.card-heading {
+  color: #35323e;
+  margin: 0;
+}
+
+.card-body {
+  font-size: 1.25rem;
+}
+
+.boost-section {
+  background-image: url("../images/bg-boost-mobile.svg");
+  background-color: #3b3054;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 6rem 0;
+  text-align: center;
+}
+@media screen and (min-width: 950px) {
+  .boost-section {
+    background-image: url("../images/bg-boost-desktop.svg");
+    padding: 4rem 0;
+  }
+}
+
+.boost-section h2 {
+  color: white;
+  margin: 0 auto 1rem;
+}
+@media screen and (min-width: 950px) {
+  .boost-section h2 {
+    margin-bottom: 2.5rem;
+  }
 }/*# sourceMappingURL=style.css.map */

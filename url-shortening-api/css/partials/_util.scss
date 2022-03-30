@@ -44,6 +44,10 @@
   background-color: colour(light-violet);
 }
 
+.grey {
+  color: colour(greyish-violet);
+}
+
 .hide-on-desktop {
   @include mq-min($small) {
     display: none;

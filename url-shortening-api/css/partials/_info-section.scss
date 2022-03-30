@@ -1,0 +1,111 @@
+.info-section {
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+}
+
+.info-box {
+  margin: auto;
+  text-align: center;
+
+  @include mq-min($small) {
+    width: 50%;
+  }
+}
+
+.info-box h2 {
+  color: colour(very-dark-blue);
+  margin-bottom: 0;
+}
+
+.info-subtitle {
+  font-size: 1.25rem;
+  
+  @include mq-min($small) {
+    font-size: 1.5rem;
+  }
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 10rem;
+  padding-bottom: 9rem;
+  position: relative;
+  
+  @include mq-min($small) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.card-container::before {
+  background-color: colour(cyan);
+  content: "";
+  position: absolute;
+  top: 2.25rem;
+  left: calc(50% - 5px);
+  height: 80%;
+  width: 10px;
+  
+  @include mq-min($small) {
+    top: 25%;
+    left: 2rem;
+    height: 10px;
+    width: 90%;
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: $radius;
+  margin-bottom: 2rem;
+  padding: 6rem 3rem 2rem;
+  position: relative;
+  text-align: center;
+
+  @include mq-min($small) {
+    text-align: left;
+  }
+}
+
+.card-one {
+  translate: 0 -3rem;
+}
+
+.card-three {
+  translate: 0 3rem;
+}
+
+.card-icon {
+  background-color: colour(dark-violet);
+  border-radius: 100px;
+  display: inline-block;
+  padding: 2rem;
+  position: absolute;
+  top: -3rem;
+  left: calc(50% - 4rem);
+
+  @include mq-min($small) {
+    left: 3rem;
+  }
+}
+
+.card-icon img {
+  display: flex;
+  width: 55px;
+  margin: auto;
+}
+
+.card-icon:last-of-type img {
+  width: 65px;
+}
+
+.card-heading {
+  color: colour(very-dark-blue);
+  margin: 0;
+}
+
+.card-body {
+  font-size: 1.25rem;
+}
