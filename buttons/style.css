@@ -1,3 +1,11 @@
+:root {
+  --c-crimson: #df1e45;
+  --c-pink: #ffcac4;
+  --c-mid-pink: #f7a298;
+  --c-pink-grey: #886c75ca;
+  --c-off-black: #1a1617;
+}
+
 *,
 *::before,
 *::after {
@@ -6,7 +14,8 @@
 
 body {
   margin: 2rem auto;
-  max-width: 800px;
+  max-width: 1000px;
+  padding: 0 1rem;
 }
 
 body,
@@ -15,39 +24,64 @@ button {
   font-size: 1rem;
 }
 
-a {
-  color: black;
-  display: inline-block;
-  text-decoration: none;
-}
-
 button {
   cursor: pointer;
 }
 
-.row {
-  display: flex;
-  gap: 2rem;
+.page-header {
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
-.box-shadow a,
-.box-shadow button {
-  background-color: deepskyblue;
+.panel-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit, 
+    minmax(15rem, 1fr)
+  );
+  gap: 1rem;
+  text-align: center;
+}
+
+.panel {
+  border: 1px solid var(--c-pink-grey);
+  border-radius: 3px;
+  padding: 1rem 1rem 1.5rem;
+}
+
+.panel-heading {
+  font-size: 1.35rem;
+  margin: 0 auto 1.5rem;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.box-shadow {
+  background-color: var(--c-pink);
   border: 0;
   box-shadow: 0 0 0 black;
   margin: 0;
   padding: 0.5rem 1rem;
-  transition: box-shadow 0.2s ease-in, translate 0.2s ease-in;
+  position: relative;
+  transition: 
+    background-color 0.05s ease-in,
+    box-shadow 0.2s ease-in, 
+    translate 0.2s ease-in;
 }
 
-.box-shadow a:hover,
-.box-shadow button:hover {
-  box-shadow: 3px 3px 7px rgba(108, 130, 136, 0.794);
+.box-shadow:hover {
+  box-shadow: 3px 3px 7px var(--c-pink-grey);
   translate: -2px -2px;
 }
 
-.growing-circle a,
-.growing-circle button {
+.box-shadow:active {
+  background-color: var(--c-mid-pink);
+}
+
+.growing-circle {
   background-color: transparent;
   border: 0;
   display: flex;
@@ -59,9 +93,8 @@ button {
   text-transform: uppercase;
 }
 
-.growing-circle a::before,
-.growing-circle button::before {
-  background-color: rgb(255, 202, 196);
+.growing-circle::before {
+  background-color: #ffcac4;
   border-radius: 100px;
   content: "";
   position: absolute;
@@ -79,30 +112,30 @@ button {
   transition: margin-left 0.3s ease-in;
 }
 
-.growing-circle a:hover img,
-.growing-circle button:hover img {
+.growing-circle:hover img {
   margin-left: 0.5rem;
 }
 
-.growing-circle a:hover::before,
-.growing-circle button:hover::before {
+.growing-circle:hover::before {
   width: calc(100% + 0.25rem);
 }
 
-.overlapping-borders a,
-.overlapping-borders button {
+.overlapping-borders {
   background-color: white;
   border: 0;
-  color: crimson;
+  color: var(--c-crimson);
+  margin-top: 0;
   padding: 0.5rem 1rem;
   position: relative;
+  transition: 
+    margin 0.05s ease-in,
+    padding 0.05s ease-in;
 }
 
 /* Vertical border */
-.overlapping-borders a::before,
-.overlapping-borders button::before {
+.overlapping-borders::before {
   content: "";
-  border: 2px solid crimson;
+  border: 2px solid var(--c-crimson);
   position: absolute;
   top: -0.3rem;
   left: 0.3rem;
@@ -114,10 +147,9 @@ button {
 }
 
 /* Horizontal border */
-.overlapping-borders a::after,
-.overlapping-borders button::after {
+.overlapping-borders::after {
   content: "";
-  border: 2px solid crimson;
+  border: 2px solid var(--c-crimson);
   position: absolute;
   top: 0;
   left: 0;
@@ -128,14 +160,52 @@ button {
     height 0.2s ease-in;
 }
 
-.overlapping-borders a:hover::before,
-.overlapping-borders button:hover::before {
+.overlapping-borders:hover::before {
   left: 0;
   width: 100%;
 }
 
-.overlapping-borders a:hover::after,
-.overlapping-borders button:hover::after {
+.overlapping-borders:hover::after {
   top: -0.3rem;
   height: calc(100% + 0.6rem);
+}
+
+.overlapping-borders:active {
+  margin-top: 0.1rem;
+  padding: 0.4rem 0.8rem;
+}
+
+.slide-up {
+  border: 0;
+  color: white;
+  padding: 0.5rem 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+.slide-up::before {
+  background-color: var(--c-off-black);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -10;
+}
+
+.slide-up::after {
+  background-color: var(--c-crimson);
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0;
+  width: 100%;
+  z-index: -1;
+  transition: height 0.25s ease-in;
+}
+
+.slide-up:hover::after {
+  height: 100%;
 }
